@@ -1,0 +1,1083 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Times New Roman","DM Sans", serif, sans-serif;
+    background-color: black;
+  }
+
+
+  /*this is the large text[titles of each section] that are seen in each section*/
+        /*  JOIN THE[header-first-text] BATTLE OF THE ANCIENTS[header-second-text]  */
+        /*  WHO WILL YOU[header-first-text]  CHOOSE?[header-second-text]  */
+        /*  THE[header-first-text]   DOTA PRO CIRCUIT[header-second-text]  */
+        /*  JOIN THE[header-first-text] BATTLE[header-second-text]   */
+  .header-first-text{
+    color: #E2DACE90; font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .header-second-text{
+    margin-bottom: 35px;
+    font-family: "Times New Roman","DM Sans", serif, sans-serif; 
+    font-weight: 700;
+    font-size: 100px;
+    color: #E2DACE; /* Light grayish orange.*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 105%; /*105%*/
+  }
+
+
+  /* the small red horizontal bar line shown below the title of each section */
+  .horizontal_bar{
+    width: 80px;
+    height: 3px;
+    min-height: 3px;
+    background-color: red;
+    border-radius: 1px;
+}
+  /***********************************
+  *
+  *
+  *     NAVIAGTION MENU BAR
+  *
+  *
+  ************************************/
+
+  nav{
+    width: 100%;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /*so that the video also covers the nav menu
+    
+    otherwise there would be a black background on nav menu*/
+    position: absolute;
+    z-index: 9999;
+  }
+ .nav-dota-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-top: 15px;
+ }
+
+ .nav-dota-logo img{
+    margin: 0px 5px 5px 15px;
+    max-height: 35px;
+ }
+
+ #store_arrow{
+    width: 24px;
+    height: 24px;
+    margin: 0px 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotateZ(135deg);
+    filter: brightness(0.7);
+    float: right;
+ }
+ .nav-dota-logo a{
+    letter-spacing: 3px;
+    margin-right: 40px;
+    margin-top: 5px;
+    color: white;
+    font-size: 1.5rem;
+    filter: brightness(0.7); /*this make the text looks gray, dull*/
+ }
+
+/*the navigation play free button*/
+ .right-side-container{
+    border: 3px solid #ffffff50;
+    padding: 15px 25px;
+    margin: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+    float: right;
+ }
+
+ .right-side-container:hover{
+    border: 3px solid red;
+ }
+
+.nav-steam-logo{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*used DEVTOOLs on Dota offical website to find the steam icon for the button on the navigation bar*/
+    background-image: url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg);
+}
+ .nav-play-free{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    filter: brightness(0.7);
+ }
+
+
+ /*language switch*/
+
+.language_switch{
+    cursor: pointer;
+    margin-right: 30px;
+
+    position: absolute;
+    right: 0px;
+    bottom: -6px;
+}
+
+.language_switch_innerwrapper{
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #ffffff90;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.language_switch_icon{
+  width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    opacity: 0.8;
+    margin-bottom: 1px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/language.svg");
+}
+
+.language_switch_arrow{
+    width: 10px;
+    height: 6px;
+    opacity: 0.9;
+    margin-left: 5px;
+}
+
+.language_list{
+    z-index: 9999;
+    padding: 12px 0px;
+    border: 1px solid #888;
+    background-color: #222;
+    width: 310px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    transition-duration: 0.3s;
+    text-align: left;
+}
+
+.Language_options{
+    font-family: "Times New Roman","DM Sans", serif, sans-serif;
+    color: #999999;
+    text-decoration: none;
+    font-size: 10px;
+    line-height: 18px;
+    padding: 0px 12px;
+    transition-duration: 0.3s;
+}
+
+.Language_options:hover {
+  color: black;
+  background-color: #999;
+}
+ /***********************************
+ *
+ *
+ *    MAIN HEADER W VIDEO BACKGROUND PLAY
+ *
+ *
+ ************************************/
+ .main_section{
+  width: 100%;
+  height: 75vh;
+  margin-bottom: -90px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.main_backgrd_video{
+position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.Quote_container{
+  opacity: 1;
+  transform: none;
+  margin-top: 10rem;
+
+
+  width: 50%;
+  height: 50%;
+  padding-left: 10rem;
+}
+
+.quote_text{
+  font-size: 60px;
+  line-height: 113%;
+  font-family: "Times New Roman","DM Sans", serif, sans-serif;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #ffffffee;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px #000000;
+}
+
+
+.quote_author{
+  font-size: 20px;
+  font-family: "Times New Roman","DM Sans", serif, sans-serif; 
+  letter-spacing: 2px;
+  color: #ffffff90;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/*the navigation play free button*/
+.header_button{
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+  float: left;
+}
+
+.header_button:hover{
+  border: 3px solid #ffffff50;
+  color: white;
+}
+
+.header-play-free{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  
+}
+ /***********************************
+ *
+ *
+ *    NEWS SECTION CONTAINER
+ *
+ *
+ ***********************************/
+ .News_container{
+  width: 1200px;
+  max-width: 100%;
+  margin: 0px auto;
+  position: relative;
+  min-height: 308px;
+  margin-bottom: -150px;
+  z-index: 100;
+}
+
+
+.News_top_header{
+  margin-bottom: 10px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+}
+.Latest_News{
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin: 2px 0px;
+  margin-right: 20px;
+}
+
+.view_all{
+  text-transform: uppercase;
+  color: #D0D1D3;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition-property: letter-spacing, font-size;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  text-decoration: none;
+}
+
+.right_arrow{
+  background-image: url(images/store_arrow.png);
+  width: 20px;
+  height: 20px;
+  margin: 0px 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateZ(180deg);
+}
+
+
+.News_cards{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.column {
+  margin-bottom: 1rem;
+  padding: 5px;
+}
+
+.card {
+  border: none !important;
+  font-family: "Times New Roman","DM Sans", serif, sans-serif;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+  height: 20.50rem;
+  width: 30rem;
+}
+
+.card-content {
+  position: absolute;
+  bottom: -100%;
+  /*background-color: #FFFFFF;*/
+  color: white;
+  width: 100%;
+  transition: bottom 0.5s linear;
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(255,255,255,0) 48%,rgba(2,2,2,1) 100%);
+}
+@media only screen and (max-width: 600px) {
+  .card-content {
+    display: block;
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 20.50rem;
+  width: 30rem;
+
+  
+}
+.card-image img {
+  transition: all 1s ease;
+  height: 20.50rem;
+  width: 30rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .card-image:hover img {
+    transform: scale(1.1, 1.1);
+    
+  }
+  .card-image:hover .card-content {
+    bottom: 0%;
+  }
+}
+
+.card-title {
+  text-indent: 1rem;
+  text-shadow: 0px 0px 10px #000000;
+  font-family: "Times New Roman","DM Sans", serif, sans-serif;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-size: 20px;
+  line-height: 115%;
+  color: white;
+  z-index: 2;
+}
+
+.Blog_entry_date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  z-index: 2;
+}
+
+.card-body {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  opacity: 1;
+  height: fit-content;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-property: height, opacity, transform;
+}
+ /***********************************
+  *
+  *
+  *     BATTLE OF THE ANCIENTS
+  *     
+  *
+  ************************************/
+
+
+.battle_of_ancients_container{
+    width: 100%;
+    min-height: 764px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+
+}
+.battle_of_ancients_bckground{
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.battle_of_ancients_bckground img{
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+/*this is the same battle of the ancients background but for mobile devices*/
+.Radiants_Dire_landscape_mobile{
+  display: none;
+    opacity: 0.6;
+    z-index: -1;
+    width: 100%;
+}
+
+/*bottom half of the page: large title text, horizontal bar line, and body text*/
+.bottom_half_page {
+  width: 100%;
+  margin: 0 auto;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  z-index: 5;
+}
+
+.battle_of_ancients_title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.battle_of_ancients_text{
+    text-align: center;
+    margin-top: 20px;
+    width: 60%;
+    color: #E2DACE; /*Light grayish orange.*/
+    font-size: 26px;
+    line-height: 115%;
+    font-weight: 100;
+}
+
+/*See what's new on dota 2 button and text */
+.battle_ancients_news_button {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 15px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+  
+}
+
+.battle_ancients_news_button:hover{
+   border: 3px solid red;
+}
+
+.battle_ancients_news_text{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+
+/***********************************
+  *
+  *
+  *         CHOOSE HEROES
+  *     
+  *
+  ************************************/
+.choose_heroes_container{
+    background-image: url(images/Choose_heroes_section/choose_heroes_bckgrd.jpg);
+    width: 100%;
+    max-width: 100%;
+    min-height: 2000px;
+    background-size: 3500px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -2;
+    z-index: 40;
+    position: relative;
+}
+
+/* large title text */
+.choose_heroes_title{
+    margin-top: 900px;
+    text-align: center;
+    padding-bottom: 20px;
+    z-index: 40;
+    position: relative;
+    width: 80%;
+}
+
+/*body text of the section*/
+.choose_heroes_text{
+    text-align: center;
+    margin-top: 20px;
+    width: 60%;
+    color: #E2DACE;/*Light grayish orange.*/
+    font-size: 26px;
+    line-height: 115%;
+    font-weight: 100;
+}
+
+/*see all heroes button and text */
+.choose_heroes_button{
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 15px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+.choose_heroes_button:hover{
+  border: 3px solid red;
+}
+
+.choose_heroes_button_text{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+
+/******************
+
+HERO GRID container
+
+*******************/
+h1,
+p {
+  text-align: center;
+}
+
+p {
+  width: 100%;
+  /*max-width: 500px;*/
+  margin: auto;
+}
+
+a:link{
+  color:white;
+}
+
+a:hover,
+a:active,
+a:visited {
+  transition: color 150ms;
+  color: #95a5a6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7f8c8d;
+  /*text-decoration: underline;*/
+}
+
+.contain {
+  width: 100%;
+
+}
+
+.row {
+  
+  width: 100%;
+}
+
+.row__inner {
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+ /* margin: 70.3125px 0;*/
+  padding-bottom: 10px;
+}
+
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 130px; /* 140.625*/
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+
+.tile__img {
+  width: 250px;
+  height: 140.625px;/* 140.625*/
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+}
+
+.tile:hover .tile__details {
+  opacity: 1;
+}
+
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: white;
+}
+
+.row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+
+.row__inner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.tile:hover ~ .tile {
+  transform: translate3d(125px, 0, 0);
+}
+
+.contain{
+	/*height: 250px;*/
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+	overflow: hidden;
+    /*background-color:black;*/
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+
+}
+
+.row{
+	display: flex;
+    width: calc(250px * 50);  /*there are 50 slides per row bcuz of duplicates--25 * 2 = 50*/
+    
+    animation: scroll 170s normal linear infinite;
+
+   
+}
+
+.title{
+
+	height: 250px;
+    width: 150px;
+    display:flex;
+    align-items: center;
+    padding: 5px; 
+
+/*to make the image move on the Z axis(depth), we
+need to add to its container a perspective*/
+	perspective: 100px;
+
+
+}
+
+/*enable auto scroll to the left*/
+@keyframes scroll{
+	0%{
+    	transform: translateX(0);
+    
+    }
+    100%{
+    /*moves the slide track leftwards (-250px) by 
+    half (50 images / 2 = 25) of its width*/
+    	transform: translateX(calc(-250px * 25));
+    }
+}
+
+/*enable auto scroll to the right
+@keyframes scrollright{
+	0%{
+    	transform: translateX(0);
+    
+    }
+    100%{
+    moves the slide track right (250px) by 
+    half (6 images / 2 = 3) of its width
+    	transform: translateX(calc(250px * 25));
+    }
+}*/
+ /***********************************
+  *
+  *
+  *     THE DOTA PRO CIRCUIT
+  *     
+  *
+  ************************************/
+  .dota_pro_circuit_container{
+    background-image: url(images/dota_pro_circuit_section/dota_pro_circuit_bckground.jpg);
+    width: 100%;
+    min-height: 1150px;
+    margin: 40px auto;
+    padding-bottom: 100px;
+    background-position: top;
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*********the dota pro circuit images**********/
+  .dota_pc_images{
+    width: 100%;
+    height: calc(100% - 50px);
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .dota_pc_image_1{
+    max-width: 20%;
+    left: 100px;
+    top: 50px;
+    transform: none;
+
+    margin-left: 95px;
+    margin-top: 50px;
+  }
+
+  .dota_pc_image_2{
+    top: 200px;
+    right: -50px;
+    max-width: 30%;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0px 0px 30px #000000;
+  }
+
+  .dota_pc_image_3{
+    max-width: 25%;
+    bottom: 550px;
+    left: -100px;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0px 0px 30px #000000;
+  }
+
+  .dota_pc_aegis_of_champions{
+    /*used DEVTOOLs on Dota offical website to find the aegis of champions icon for the dota pro circuit section*/
+    background-image: url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/dpc.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 96px;
+    min-height: 96px;
+    margin-top: 550px;
+  }
+
+  .dota_pc_title {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .dota_pc_text{
+    text-align: center;
+    margin-top: 20px;
+    width: 60%;
+    color: #E2DACE; /*Light grayish orange.*/
+    font-size: 26px;
+    line-height: 115%;
+    font-weight: 100;
+  }
+ /***********************************
+  *
+  *
+  *     JOIN THE BATTLE
+  *     BLOODSEEKER BCKGRD IMAGE
+  *
+  ************************************/
+
+  .bloodseeker_bckgrd{
+    background-image: url(images/Join_the_battle_section/join_the_battle.png);
+    width: 100%;
+    margin: 40px auto;
+    background-size: cover;
+    background-repeat: none;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    /*padding: 50px 150px;*/
+    /*justify-content: center;*/
+    width: 100%;
+    margin: 40px auto;
+    background-size: cover;
+    background-repeat: none;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 95px 150px;
+    /*padding: 50px 150px;*/
+  }
+
+  /*join the battle text*/
+  .join_the_battle_text{
+    text-align: left;
+    margin-bottom: 35px;
+    font-family: "Times New Roman","DM Sans", serif, sans-serif; 
+    font-weight: 700;
+    font-size: 100px;
+    color: #E2DACE; /*Light grayish orange.*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 75%;
+    /*position: absolute;
+    padding: 50px 150px;*/
+    
+  }
+
+
+  /*the play for free button and text */
+  .join_battle_play_free {
+    border: 3px solid #ffffff50;
+    padding: 15px 25px;
+    margin: 15px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+    float: right;
+   }
+  
+   .join_battle_play_free:hover{
+     border: 3px solid red;
+   }
+
+  .join-battle-play-free-text{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  /************************************
+  *
+  *
+  *         FOOTER
+  *
+  *
+  *************************************/
+  footer {
+    background-color: black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .footer-icons{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-icons img{
+    margin: 0px 15px 20px 15px;
+    max-height: 30px;
+  }
+  
+  .footer-text{
+    color: grey;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+
+
+/*****************************************
+*
+*
+*           MEDIA QUERIES
+*
+*
+****************************************/
+/*******join the battle section*********/
+@media (max-width: 1600px){
+  .join_the_battle_text, .join_the_battle_text * {
+      font-size: 100px;
+  }
+}
+ /*****Dota pro circuit championship******/
+@media (max-width: 1600px){
+.main .dota_pro_circuit_container .dota_pc_images .dota_pc_image_1 {
+      max-width: 20%;
+      left: 100px;
+  }
+}
+@media (max-width: 1600px){
+  .main .dota_pro_circuit_container .dota_pc_images .dota_pc_image_2 {
+        max-width: 30%;
+        
+    }
+}
+
+@media (max-width: 1600px){
+  .main .dota_pro_circuit_container .dota_pc_images .dota_pc_image_3 {
+    max-width: 25%;
+    bottom: 550px;
+    left: -100px;
+        
+    }
+}
+
+@media (max-width: 1600px){
+  .dota_pc_title, .dota_pc_title * {
+      font-size: 100px;
+  }
+}
+
+
+@media (max-width: 1600px){
+    .header-first-text {
+        font-size: 50px;
+    }
+  }
+
+@media (max-width: 1600px){
+  .header-second-text {
+      font-size: 100px;
+  }
+}
+
+/*********choose heroes section**********/
+
+@media (max-width: 1600px){
+  .choose_heroes_title, .choose_heroes_title * {
+      font-size: 100px;
+  }
+}
+@media (max-width: 1600px){
+  .choose_heroes_title .header-first-text, .choose_heroes_title * .header-first-text {
+      font-size: 50px;
+  }
+}
+
+
+/************battle section****************/
+
+@media (max-width: 1600px){
+  .battle_of_ancients_title, .battle_of_ancients_title *{
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 1600px){
+  .battle_of_ancients_title .header-first-text, .battle_of_ancients_title * .header-first-text {
+      font-size: 50px;
+  }
+}
